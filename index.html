@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podatki</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+
+<body>
+  
+    <div class="accounting">
+        <h1 class="title">Kalkulator podatku na działalności gospodarczej</h1>
+        <div class="accounting-class">
+          
+            <label for="tax" class="tax">Opodatkowanie</label>
+            <select id="tax">
+                <option value="0" disabled selected>Wybierz formę opodatkowania</option>
+                <option value="1">Ryczałt</option>
+                <option value="2" class="flat-rate">Liniowy</option>
+                <option value="3">Zasady ogólne</option>
+            </select>
+       
+            
+           <div class="vat-div ">
+            <label for="vat" class="vat">Stawka podatku</label>
+            <select id="vat" class="vat-array">
+                <option value="0" disabled selected>Wybierz stawkę</option>
+                <option value="1" class="disable">3%</option>
+                <option value="2" class="disable">5.5%</option>
+                <option value="3" class="disable">8.5%</option>
+                <option value="4" class="disable">10%</option>
+                <option value="5" class="disable">12%</option>
+                <option value="6" class="disable">12.5%</option>
+                <option value="7" class="disable">14%</option>
+                <option value="8" class="disable">15%</option>
+                <option value="9">17%</option>
+                <option value="10">32%</option>
+            </select>
+           </div>
+            
+        </div>
+       <div class="error-meth-vat">
+        <p class="error-method"></p>
+        <p class="error-vat"></p>
+       </div>
+        
+      <div class="inputs">
+        <div class="income number">
+            <h1>Przychód netto</h1>
+            <input type="number" ondrop="return false;" onpaste="return false;"
+            onkeypress="return event.charCode>=48 && event.charCode<=57" required/ class="input-income" placeholder="Podaj kwotę">
+            
+        </div>
+        <p class="error-income"></p>
+        <div class="costs number">
+            <h1>Koszty netto</h1>
+            <input type="number" ondrop="return false;" onpaste="return false;"
+            onkeypress="return event.charCode>=48 && event.charCode<=57" required/ class="input-cost" placeholder="Podaj kwotę">
+            
+        </div>
+        
+            <p class="error-cost"></p>
+      </div>
+        
+        <div class="button">
+            <button class="resultBtn btn"><p>Oblicz</p></button>
+            <button class="resetBtn btn"><p>Wyczyść</p></button>
+        </div>
+        <div class="result">
+            <p class="result-number"></p>
+        </div>
+
+
+    </div>
+  
+
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
